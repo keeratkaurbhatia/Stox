@@ -28,17 +28,17 @@ Automated event workflows handle alerts, AI-driven daily summaries, and market s
 
 ## <a name="features">🔋 Features</a>
 
-✅ Stock Dashboard – Track real-time stock prices with interactive charts and filters.
-✅ AI Insights – Get market summaries, sentiment scores, and earnings highlights.
-✅ Powerful Search – Quickly find companies by name, symbol, or sector.
-✅ Watchlist (CRUD) – Add, view, update, and delete your favorite stocks from your personalized list.
+-✅ Stock Dashboard – Track real-time stock prices with interactive charts and filters.
+-✅ AI Insights – Get market summaries, sentiment scores, and earnings highlights.
+-✅ Powerful Search – Quickly find companies by name, symbol, or sector.
+-✅ Watchlist (CRUD) – Add, view, update, and delete your favorite stocks from your personalized list.
 
-🧠 CRUD = Create, Read, Update, Delete — the 4 core actions for managing data.
-✅ Custom Alerts – Get notified when stock prices or volumes hit your chosen thresholds.
-✅ Company Insights – Access financial data like EPS, P/E ratio, and recent filings.
-✅ AI-Driven Workflows – Automated daily digests, price updates, and alert scheduling via Inngest.
-✅ Admin Dashboard – Manage stocks, news, and user data seamlessly.
-✅ Secure Auth – Built-in email and password authentication with Better Auth.
+--🧠 CRUD = Create, Read, Update, Delete — the 4 core actions for managing data.
+--✅ Custom Alerts – Get notified when stock prices or volumes hit your chosen thresholds.
+--✅ Company Insights – Access financial data like EPS, P/E ratio, and recent filings.
+--✅ AI-Driven Workflows – Automated daily digests, price updates, and alert scheduling via Inngest.
+--✅ Admin Dashboard – Manage stocks, news, and user data seamlessly.
+--✅ Secure Auth – Built-in email and password authentication with Better Auth.
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
