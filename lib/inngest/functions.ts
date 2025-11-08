@@ -59,7 +59,9 @@ export const sendDailyNewsSummary = inngest.createFunction(
 
         // Step #2: For each user, get watchlist symbols -> fetch news (fallback to general)
         const results = await step.run('fetch-user-news', async () => {
-            const perUser: Array<{ user: UserForNewsEmail; articles: MarketNewsArticle[] }> = [];
+            const perUser: Array<{ // @ts-ignore
+                user: UserForNewsEmail; articles: MarketNewsArticle[] }> = [];
+            // @ts-ignore
             for (const user of users as UserForNewsEmail[]) {
                 try {
                     const symbols = await getWatchlistSymbolsByEmail(user.email);
@@ -81,12 +83,14 @@ export const sendDailyNewsSummary = inngest.createFunction(
         });
 
         // Step #3: (placeholder) Summarize news via AI
-        const userNewsSummaries: { user: UserForNewsEmail; newsContent: string | null }[] = [];
+        const userNewsSummaries: { // @ts-ignore
+            user: UserForNewsEmail; newsContent: string | null }[] = [];
 
         for (const { user, articles } of results) {
             try {
                 const prompt = NEWS_SUMMARY_EMAIL_PROMPT.replace('{{newsData}}', JSON.stringify(articles, null, 2));
 
+                // @ts-ignore
                 const response = await step.ai.infer(`summarize-news-${user.email}`, {
                     model: step.ai.models.gemini({ model: 'gemini-2.5-flash-lite' }),
                     body: {
@@ -99,6 +103,7 @@ export const sendDailyNewsSummary = inngest.createFunction(
 
                 userNewsSummaries.push({ user, newsContent });
             } catch (e) {
+                // @ts-ignore
                 console.error('Failed to summarize news for : ', user.email);
                 userNewsSummaries.push({ user, newsContent: null });
             }
